@@ -15,14 +15,17 @@ class UserService {
     // Hash the password
     const hashPassword = await bcrypt.hash(password, 3);
     // Generate the random string as activation link
-    const activationLink = uuid.v4;
+    const activationLink = uuid.v4();
     const user = await UserModel.create({
       email,
       password: hashPassword,
       activationLink,
     });
     // Send activation message to email
-    await mailService.sendActivationMail(email, activationLink);
+    await mailService.sendActivationMail(
+      email,
+      `${process.env.API_URL}/api/activate/${activationLink}`
+    );
 
     const userDto = new UserDto(user); // fields: id, email, isActivated
     const tokens = tokenService.generateTokens({ ...userDto });
