@@ -5,6 +5,7 @@ const mailService = require("./mail-service");
 const tokenService = require("./token-service");
 const UserDto = require("../dtos/user_dto");
 const ApiError = require("../exceptions/api-error");
+const userModel = require("../models/user-model");
 
 class UserService {
   async registration(email, password) {
@@ -98,6 +99,11 @@ class UserService {
 
     await tokenService.saveToken(userDto.id, tokens.refreshToken);
     return { ...tokens, user: userDto };
+  }
+
+  async getAllUsers(req, res, next) {
+    const users = await userModel.find();
+    return users;
   }
 }
 
