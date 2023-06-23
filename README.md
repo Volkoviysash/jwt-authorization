@@ -2,8 +2,6 @@
 
 <p>Welcome to the JWT Authorization example repository! This repository demonstrates a simple implementation of JWT (JSON Web Token) authorization using a client-server architecture. It includes a <code>client</code> folder, which contains a React application built with MobX and Tailwind CSS, and a <code>server</code> folder, which includes a Node.js Express server using router and Axios.</p>
 
-<h2>Table of Contents</h2>
-
 <h2 id="introduction">Introduction</h2>
 
 <p>This repository provides a basic implementation of JWT authorization. JWTs are used for secure authentication and authorization in web applications. In this example, users can register their accounts and verify them via email. Once authenticated, users are issued access and refresh tokens, which are stored in local storage and cookies, respectively. When the access token expires, a request is made to the server using the refresh token to obtain new tokens.</p>
