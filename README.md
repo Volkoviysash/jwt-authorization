@@ -19,7 +19,26 @@
   <li>Secure storage of refresh token in cookies</li>
   <li>Automatic token refresh on access token expiration</li>
   <li>Retrieval of registered user nicknames for authorized users</li>
+  <li>MongoDB was used as the database</li>  
 </ul>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<p>Login form:</p>
+<img src='https://github.com/Volkoviysash/jwt-authorization/assets/90283311/7d0ec856-5a60-4122-b470-a7883b890a37' alt="Login form"/>
+<p>Here you can log in or register, when registering you must go to and accept your account using email.</p>
+
+<p></p>
+
+<p>Main Page:</p>
+<img src='https://github.com/Volkoviysash/jwt-authorization/assets/90283311/657f6d68-4e6c-4eb3-97f1-c56e6b9b244d' alt="Main Page"/>
+<p>Here you can view basic information about your account, and you can also log out and see the nicknames of all registered users clicking the Get Users button.</p>
+
+<p></p>
+
+<p>Get Users Section:</p>
+<img src='https://github.com/Volkoviysash/jwt-authorization/assets/90283311/29102638-dd20-40b9-8310-8c0cd5cc8023' alt="Get Users Section"/>
+<p>This button works only for authorized users and shows all registered users.</p>
 
 <h2 id="installation">Installation</h2>
 
@@ -94,7 +113,7 @@
 <pre><code>npm start
 </code></pre>
 
-<p>The server will start running on <a href="http://localhost:5000">http://localhost:5000</a>.</p>
+<p>The server will start running on <a href="http://localhost:4000">http://localhost:4000</a>.</p>
 
 <ol start="5">
   <li>Open your browser and visit <a href="http://localhost:3000">http://localhost:3000</a> to access the client application.</li>
